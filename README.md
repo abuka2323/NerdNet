@@ -7,7 +7,11 @@ This MERN Social Media App is a full-featured social media application that incl
 
 Clone the repository: 
 git clone https://github.com/abuka2323/mern-social-media.git 
+
+
  ---> cd server --> npm install
+
+ 
  ---> cd client --> npm install
 
  to run locally --> npm start 
