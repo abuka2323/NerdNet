@@ -10,20 +10,20 @@ git clone https://github.com/abuka2323/mern-social-media.git
 
 
  ---> cd server --> npm install
-// dataFetcher.test.js (or any appropriate test file)
-import DataFetcher from './dataFetcher'; // Import the DataFetcher class
-import { jest } from '@jest/globals'; // Import Jest's mocking capabilities
+> cd client --> npm install
+
+ to run locally --> npm start 
+ 
+import DataFetcher from './dataFetcher';
+import { jest } from '@jest/globals';
 
 describe('DataFetcher', () => {
-  // Mock the Falcor model
   const mockModel = {
     getValue: jest.fn(),
   };
 
-  // Create a new instance of DataFetcher with the mocked model
   const dataFetcher = new DataFetcher(mockModel);
 
-  // Test positive scenario
   it('should fetch page JSON from MCM API', async () => {
     const nodeId = 'someNodeId';
     const expectedResponse = { someKey: 'someValue' };
@@ -37,7 +37,6 @@ describe('DataFetcher', () => {
     );
   });
 
-  // Test error scenario
   it('should throw an error when API call fails', async () => {
     const nodeId = 'invalidNodeId';
     const expectedError = new Error('Failed to get page JSON. Error from Falcor:');
@@ -49,8 +48,3 @@ describe('DataFetcher', () => {
     );
   });
 });
- 
- ---> cd client --> npm install
-
- to run locally --> npm start 
- 
